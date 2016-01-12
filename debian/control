@@ -1,0 +1,29 @@
+Source: qtserialport-qt4
+Section: libs
+Priority: extra
+Maintainer: Andrew Irwin <airwin@topcon.com>
+Build-Depends: debhelper (>= 9), cdbs, qt4-qmake, autotools-dev
+Standards-Version: 3.9.5
+Homepage: https://qt-project.org/wiki/QtSerialPort
+Vcs-Git: git://gitorious.org/qt/qtserialport.git
+
+Package: qtserialport-qt4
+Priority: extra
+Architecture: any
+Depends: libqtcore4, udev, libudev1, ${shlibs:Depends}, ${misc:Depends}
+Description: QSerialPort for Qt4 library
+ The QtSerialPort module is an add-on module for the Qt5 library, providing a
+ single interface for both hardware and virtual serial ports. The module is
+ backwards compatible with Qt4 but doesn't ship with Qt4. This package provides
+ the module for Qt4.
+
+Package: qtserialport-qt4-dev
+Section: libdevel
+Priority: extra
+Architecture: any
+Depends: qt4-dev-tools, libudev-dev, ${misc:Depends}
+Description: QSerialPort for Qt4 static library and headers
+ The QtSerialPort module is an add-on module for the Qt5 library, providing a
+ single interface for both hardware and virtual serial ports. The module is
+ backwards compatible with Qt4 but doesn't ship with Qt4. This package
+ provides the module for Qt4.

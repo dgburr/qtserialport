@@ -1,0 +1,5 @@
+qtserialport-qt4 (5.3-1) UNRELEASED; urgency=low
+
+  * Initial release. (Closes: #9999)
+
+ -- Andrew Irwin <airwin@topcon.com>  Fri, 19 Dec 2014 11:36:26 +0100

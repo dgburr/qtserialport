@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/qmake.mk
+
+DEB_INSTALL_DIRS_qtserialport-qt4 += usr/lib/$(DEB_BUILD_GNU_TYPE)
+
+DEB_INSTALL_DIRS_qtserialport-qt4-dev += usr/include/qt4/QtSerialPort/
+DEB_INSTALL_DIRS_qtserialport-qt4-dev += usr/share/qt4/mkspecs/features/
+
+QMAKE = /usr/bin/qmake-qt4
+
+binary-install/qtserialport-qt4::
+	dh_install -p$(cdbs_curpkg) usr/lib/$(DEB_BUILD_GNU_TYPE)/libQtSerialPort.so.1.0.0
+	dh_install -p$(cdbs_curpkg) usr/lib/$(DEB_BUILD_GNU_TYPE)/libQtSerialPort.so.1.0
+	dh_install -p$(cdbs_curpkg) usr/lib/$(DEB_BUILD_GNU_TYPE)/libQtSerialPort.so.1
+
+binary-install/qtserialport-qt4-dev::
+	dh_install -p$(cdbs_curpkg) usr/lib/$(DEB_BUILD_GNU_TYPE)/libQtSerialPort.so
+	dh_install -p$(cdbs_curpkg) usr/include/qt4/QtSerialPort/
+	dh_install -p$(cdbs_curpkg) usr/share/qt4/mkspecs/features/
